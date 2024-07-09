@@ -29,6 +29,13 @@ body {
   strong {
     color: $secondary-color;
   }
+  button {
+    background-color: $secondary-color;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
 }
 
 .reviews {
@@ -44,16 +51,53 @@ body {
       color: $primary-color;
     }
   }
+  form {
+    display: flex;
+    flex-direction: column;
+    input,
+    textarea {
+      margin: 5px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: $secondary-color;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+  }
 }
 
 .image-gallery {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   img {
     max-width: 100%;
     height: auto;
     margin: 5px;
+  }
+  button {
+    background-color: $secondary-color;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin: 5px;
+  }
+}
+
+.cart {
+  margin: 20px 0;
+  h2 {
+    font-size: 1.5em;
+  }
+  div {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
   }
 }
 

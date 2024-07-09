@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-const ProductDetails = ({ productId }) => {
+const ProductDetails = ({ productId, onAddToCart }) => {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    // Fetch product data from API
     const fetchProduct = async () => {
       try {
         const response = await fetch(
@@ -29,6 +28,7 @@ const ProductDetails = ({ productId }) => {
       <p>
         <strong>Price:</strong> ${product.price}
       </p>
+      <button onClick={() => onAddToCart(product)}>Add to Cart</button>
     </div>
   );
 };
