@@ -1,10 +1,10 @@
 import React from "react";
 
-const ImageGallery = ({ images }) => {
+const ImageGallery = ({ images = [] }) => {
   return (
     <div className="image-gallery">
       {images.map((image, index) => (
-        <img key={index} src={image} alt={`Product image ${index + 1}`} />
+        <img key={index} src={image.src} alt={image.description} />
       ))}
     </div>
   );

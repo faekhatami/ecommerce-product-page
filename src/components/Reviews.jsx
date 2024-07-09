@@ -1,6 +1,6 @@
 import React from "react";
 
-const Reviews = ({ reviews }) => {
+const Reviews = ({ reviews = [] }) => {
   return (
     <div className="reviews">
       <h2>Customer Reviews</h2>
